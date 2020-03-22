@@ -148,7 +148,11 @@ export const WorldSummary = () => {
             color="#DA2C38"
             label="Deaths"
             number={data.summary.deaths.toLocaleString()}
-            other={`${data.summary.mortalityRate}% mortality rate`}
+            other={
+              <span title="Indicative only; the true mortality rate for a pandemic can only be calculated at the end and not while it is ongoing.">
+                {data.summary.mortalityRate}% mortality rate*
+              </span>
+            }
           />
         </>
       )}
