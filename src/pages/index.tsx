@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 import { getLastUpdated } from '../api';
 import { Container } from '../components/ui/Container';
 import { CSSReset, Theme } from '../components/ui/Theme';
@@ -32,7 +33,13 @@ const IndexPage = () => {
   return (
     <Theme>
       <CSSReset />
+      <Helmet>
+        <title>Overview · COVID-19</title>
+      </Helmet>
       <Container>
+        <div style={{ margin: '16px 0' }}>
+          <h1>COVID-19 Overview</h1>
+        </div>
         <div style={{ margin: '24px 0' }}>
           <WorldDailyCases />
         </div>
